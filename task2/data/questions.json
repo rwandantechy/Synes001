@@ -1,0 +1,86 @@
+[
+    {
+        "question_id": "Q1",
+        "question": "Have we tried compost mulch or a similar soil-moisture approach before in fictional Rwanda coffee trials, and what happened?",
+        "expected_evidence": [
+            "RW-CF-001",
+            "RW-CF-002",
+            "RW-CF-003",
+            "RW-CF-014",
+            "RW-CF-015"
+        ],
+        "minimum_ids": 2,
+        "required_terms": [
+            "mulch"
+        ],
+        "uncertainty_required": false
+    },
+    {
+        "question_id": "Q2",
+        "question": "Which parameter changes in these fictional Rwanda coffee experiments appear associated with improved yield or cherry retention?",
+        "expected_evidence": [
+            "RW-CF-001",
+            "RW-CF-003",
+            "RW-CF-006",
+            "RW-CF-008",
+            "RW-CF-010"
+        ],
+        "minimum_ids": 2,
+        "required_terms": [
+            "parameter",
+            "change"
+        ],
+        "uncertainty_required": true
+    },
+    {
+        "question_id": "Q3",
+        "question": "Which failures resemble the current fictional problem of wilt and low yield, and what happened in those trials?",
+        "expected_evidence": [
+            "RW-CF-011",
+            "RW-CF-002",
+            "RW-CF-005",
+            "RW-CF-007",
+            "RW-CF-009"
+        ],
+        "minimum_ids": 2,
+        "required_terms": [
+            "failure"
+        ],
+        "uncertainty_required": true
+    },
+    {
+        "question_id": "Q4",
+        "question": "Which fictional Rwanda coffee experiments should I inspect first before repeating the current low-yield trial, considering project impact but not treating impact as proof of success?",
+        "expected_evidence": [
+            "RW-CF-011",
+            "RW-CF-012",
+            "RW-CF-014",
+            "RW-CF-015",
+            "RW-CF-002"
+        ],
+        "minimum_ids": 3,
+        "required_terms": [
+            "inspect",
+            "impact"
+        ],
+        "impact_required": true,
+        "uncertainty_required": false
+    },
+    {
+        "question_id": "Q5",
+        "question": "Is there enough evidence to suggest a next condition in these fictional trials, or should we run another controlled comparison?",
+        "expected_evidence": [
+            "RW-CF-003",
+            "RW-CF-006",
+            "RW-CF-008",
+            "RW-CF-014",
+            "RW-CF-015"
+        ],
+        "minimum_ids": 2,
+        "required_terms": [
+            "controlled",
+            "evidence"
+        ],
+        "uncertainty_required": true
+    }
+]

@@ -1,0 +1,319 @@
+[
+    {
+        "experiment_id": "RW-CF-001",
+        "research_goal": "Test whether compost mulch improves early dry-season soil moisture.",
+        "location": "Nyamagabe, Rwanda",
+        "coffee_variety": "Bourbon Mayaguez",
+        "protocol": "Randomized comparison of 20 trees with 5 cm compost mulch and 20 unmulched trees for 8 weeks.",
+        "parameters": {
+            "mulch_cm": 5,
+            "shade_percent": 40,
+            "irrigation_liters_per_tree_week": 0
+        },
+        "outcome": "success",
+        "result": "Mulched trees had 12% more cherries at the final count and visibly less midday wilt.",
+        "failure_mode": null,
+        "change_from_previous": "Baseline; no prior mulch trial in this block.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; not a real agricultural finding or farming advice.",
+        "project_impact_score": 8,
+        "impact_reason": "Directly tests the project's initial soil-moisture hypothesis.",
+        "lab_id": "SYN-LAB-01",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-002",
+        "research_goal": "Repeat the compost mulch comparison under heavier shade.",
+        "location": "Nyamagabe, Rwanda",
+        "coffee_variety": "Bourbon Mayaguez",
+        "protocol": "Matched 20-tree comparison with 5 cm compost mulch under approximately 70% shade for 8 weeks.",
+        "parameters": {
+            "mulch_cm": 5,
+            "shade_percent": 70,
+            "irrigation_liters_per_tree_week": 0
+        },
+        "outcome": "failure",
+        "result": "No yield improvement; six mulched trees showed fungal leaf spots after prolonged wet mornings.",
+        "failure_mode": "Excess moisture and fungal leaf spots under high shade.",
+        "change_from_previous": "Increased shade from 40% to 70% while keeping mulch depth at 5 cm.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; conflicting follow-up, not a real agricultural finding or farming advice.",
+        "project_impact_score": 9,
+        "impact_reason": "A direct conflicting replication that changes how the project prioritizes mulch and shade trials.",
+        "lab_id": "SYN-LAB-01",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-003",
+        "research_goal": "Compare shallow and deep mulch during a dry spell.",
+        "location": "Huye, Rwanda",
+        "coffee_variety": "Caturra",
+        "protocol": "Three arms of 18 trees each: no mulch, 3 cm mulch, and 8 cm mulch; observations for 6 weeks.",
+        "parameters": {
+            "mulch_cm": 0,
+            "shade_percent": 35,
+            "irrigation_liters_per_tree_week": 2
+        },
+        "outcome": "success",
+        "result": "The 3 cm arm had the highest cherry retention; the 8 cm arm was similar to control.",
+        "failure_mode": null,
+        "change_from_previous": "Added a 3 cm arm and fixed supplemental irrigation at 2 liters per tree per week.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; modest and short-duration result, not a real agricultural finding or farming advice.",
+        "project_impact_score": 8,
+        "impact_reason": "Tests a concrete condition range needed to interpret the first mulch result.",
+        "lab_id": "SYN-LAB-02",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-004",
+        "research_goal": "Test moderate shade reduction for flowering consistency.",
+        "location": "Gicumbi, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Prune shade trees to target 35% versus an unpruned 55% shade control; 24 trees per arm.",
+        "parameters": {
+            "mulch_cm": 0,
+            "shade_percent": 35,
+            "irrigation_liters_per_tree_week": 1
+        },
+        "outcome": "success",
+        "result": "The 35% shade arm produced 9% more flowers, but the harvest count was inconclusive.",
+        "failure_mode": null,
+        "change_from_previous": "Reduced shade target from approximately 55% to 35%.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; flowering is not the same as yield, not a real agricultural finding or farming advice.",
+        "project_impact_score": 6,
+        "impact_reason": "Explores a plausible shade lever, but the missing harvest endpoint limits project decisions.",
+        "lab_id": "SYN-LAB-03",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-005",
+        "research_goal": "Check whether aggressive shade reduction increases yield.",
+        "location": "Gicumbi, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Compare 15% shade with 35% shade for one flowering cycle; 16 trees per arm.",
+        "parameters": {
+            "mulch_cm": 0,
+            "shade_percent": 15,
+            "irrigation_liters_per_tree_week": 1
+        },
+        "outcome": "failure",
+        "result": "Leaves showed heat stress and berry count was 6% lower than the 35% shade comparison.",
+        "failure_mode": "Heat stress after aggressive shade reduction.",
+        "change_from_previous": "Reduced target shade from 35% to 15%.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; not a real agricultural finding or farming advice.",
+        "project_impact_score": 7,
+        "impact_reason": "A high-risk boundary condition that helps prevent repeating an aggressive shade change.",
+        "lab_id": "SYN-LAB-03",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-006",
+        "research_goal": "Compare compost tea concentrations for cherry retention.",
+        "location": "Kigali rural sector, Rwanda",
+        "coffee_variety": "Catuai",
+        "protocol": "Weekly foliar applications at 0%, 2%, and 5% concentration, randomized across 30 trees for 5 weeks.",
+        "parameters": {
+            "compost_tea_percent": 2,
+            "shade_percent": 45,
+            "irrigation_liters_per_tree_week": 1
+        },
+        "outcome": "success",
+        "result": "The 2% arm retained 8% more cherries than control; the 5% arm was not better.",
+        "failure_mode": null,
+        "change_from_previous": "Introduced a concentration series instead of a single treatment.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; not a real agricultural finding or farming advice.",
+        "project_impact_score": 7,
+        "impact_reason": "Tests a separate treatment family and supplies a concentration comparison for future trials.",
+        "lab_id": "SYN-LAB-04",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-007",
+        "research_goal": "Repeat the 2% compost tea treatment in a wetter site.",
+        "location": "Musanze, Rwanda",
+        "coffee_variety": "Catuai",
+        "protocol": "2% weekly foliar application versus water control across 24 trees for 4 weeks.",
+        "parameters": {
+            "compost_tea_percent": 2,
+            "shade_percent": 60,
+            "irrigation_liters_per_tree_week": 0
+        },
+        "outcome": "failure",
+        "result": "No measurable retention difference; untreated controls had slightly more retained cherries.",
+        "failure_mode": "Cold, wet conditions and short observation window.",
+        "change_from_previous": "Moved from 45% shade with weekly irrigation to 60% shade without irrigation.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; insufficient replication, not a real agricultural finding or farming advice.",
+        "project_impact_score": 8,
+        "impact_reason": "A failed replication that is important for identifying site and weather dependence.",
+        "lab_id": "SYN-LAB-04",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-008",
+        "research_goal": "Test regulated deficit irrigation during fruit filling.",
+        "location": "Rulindo, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Compare 4 liters weekly with 2 liters weekly for 10 weeks, 25 trees per arm.",
+        "parameters": {
+            "mulch_cm": 3,
+            "shade_percent": 40,
+            "irrigation_liters_per_tree_week": 4
+        },
+        "outcome": "success",
+        "result": "The 4-liter arm had 11% higher mean cherry mass; confidence was limited because blocks were uneven.",
+        "failure_mode": null,
+        "change_from_previous": "Increased irrigation from 2 to 4 liters per tree per week while retaining 3 cm mulch.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; limited block balance, not a real agricultural finding or farming advice.",
+        "project_impact_score": 9,
+        "impact_reason": "Directly informs the project's irrigation decision, despite weak block balance.",
+        "lab_id": "SYN-LAB-05",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-009",
+        "research_goal": "Test whether more irrigation always improves cherry mass.",
+        "location": "Rulindo, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Compare 4 liters and 8 liters weekly for 8 weeks with 3 cm mulch; 20 trees per arm.",
+        "parameters": {
+            "mulch_cm": 3,
+            "shade_percent": 40,
+            "irrigation_liters_per_tree_week": 8
+        },
+        "outcome": "failure",
+        "result": "The 8-liter arm had more yellowing leaves and no additional cherry mass over 4 liters.",
+        "failure_mode": "Possible overwatering; soil drainage was not measured.",
+        "change_from_previous": "Increased irrigation from 4 to 8 liters per tree per week.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; drainage was unmeasured, not a real agricultural finding or farming advice.",
+        "project_impact_score": 9,
+        "impact_reason": "A high-priority boundary test for whether more water should be avoided, even though it failed.",
+        "lab_id": "SYN-LAB-05",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-010",
+        "research_goal": "Compare hand weeding frequency for flowering and yield.",
+        "location": "Kayonza, Rwanda",
+        "coffee_variety": "Robusta trial stock",
+        "protocol": "Monthly weeding versus biweekly weeding across 30 trees for one season.",
+        "parameters": {
+            "mulch_cm": 0,
+            "shade_percent": 30,
+            "weeding_interval_days": 14
+        },
+        "outcome": "success",
+        "result": "Biweekly weeding was associated with 7% more flowers, but harvest data were not collected.",
+        "failure_mode": null,
+        "change_from_previous": "Shortened weeding interval from 30 to 14 days.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; missing harvest endpoint, not a real agricultural finding or farming advice.",
+        "project_impact_score": 5,
+        "impact_reason": "Explores labor intensity but cannot resolve the project's yield question without harvest data.",
+        "lab_id": "SYN-LAB-06",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-011",
+        "research_goal": "Investigate a suspected wilt and low-yield problem.",
+        "location": "Rusizi, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Compare affected and unaffected rows; record soil moisture, shade, symptoms, and cherry count for 3 weeks.",
+        "parameters": {
+            "mulch_cm": 6,
+            "shade_percent": 68,
+            "irrigation_liters_per_tree_week": 0
+        },
+        "outcome": "failure",
+        "result": "Affected rows had wilt, standing water after rain, and 22% fewer cherries than unaffected rows.",
+        "failure_mode": "Waterlogging suspected; no pathogen test was performed.",
+        "change_from_previous": "Added symptom and drainage observations instead of changing one treatment variable.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; diagnosis is incomplete, not a real agricultural finding or farming advice.",
+        "project_impact_score": 10,
+        "impact_reason": "Directly matches the current wilt and low-yield problem and changes the next diagnostic step.",
+        "lab_id": "SYN-LAB-07",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-012",
+        "research_goal": "Test drainage channels for the suspected wilt problem.",
+        "location": "Rusizi, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Install shallow drainage channels in 12 affected trees and compare with 12 affected controls for 6 weeks.",
+        "parameters": {
+            "mulch_cm": 3,
+            "shade_percent": 55,
+            "irrigation_liters_per_tree_week": 0,
+            "drainage_channels": true
+        },
+        "outcome": "success",
+        "result": "Wilt symptoms decreased in the channel group, but cherry recovery was not measured to harvest.",
+        "failure_mode": null,
+        "change_from_previous": "Reduced shade and mulch and added drainage channels after the waterlogging observation.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; symptom result without harvest endpoint, not a real agricultural finding or farming advice.",
+        "project_impact_score": 10,
+        "impact_reason": "Tests a targeted response to the highest-priority current problem, although harvest impact is unknown.",
+        "lab_id": "SYN-LAB-07",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-013",
+        "research_goal": "Assess whether pruning improves airflow and reduces leaf disease.",
+        "location": "Karongi, Rwanda",
+        "coffee_variety": "Bourbon",
+        "protocol": "Selective pruning versus routine pruning in 18-tree blocks; monitor leaf spots for 5 weeks.",
+        "parameters": {
+            "mulch_cm": 2,
+            "shade_percent": 50,
+            "irrigation_liters_per_tree_week": 1,
+            "pruning": "selective"
+        },
+        "outcome": "failure",
+        "result": "Leaf spots were lower after selective pruning, but yield was not measured and blocks differed in age.",
+        "failure_mode": "Confounding by block age and missing yield endpoint.",
+        "change_from_previous": "Changed pruning pattern while leaving shade target nominally similar.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; insufficient for yield conclusions, not a real agricultural finding or farming advice.",
+        "project_impact_score": 6,
+        "impact_reason": "May inform disease follow-up, but confounding prevents a direct yield decision.",
+        "lab_id": "SYN-LAB-08",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-014",
+        "research_goal": "Compare mulched and unmulched trees for a current low-yield complaint.",
+        "location": "Nyabihu, Rwanda",
+        "coffee_variety": "Caturra",
+        "protocol": "Pair 15 trees by slope position, then assign 3 cm mulch or no mulch; measure cherries for 10 weeks.",
+        "parameters": {
+            "mulch_cm": 3,
+            "shade_percent": 45,
+            "irrigation_liters_per_tree_week": 2
+        },
+        "outcome": "success",
+        "result": "Mulched trees had 10% higher cherry count, but the estimate overlapped zero across paired blocks.",
+        "failure_mode": null,
+        "change_from_previous": "Added paired assignment and slope matching to reduce location imbalance.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; uncertain estimate, not a real agricultural finding or farming advice.",
+        "project_impact_score": 9,
+        "impact_reason": "A close replication of the current low-yield question with improved pairing, despite uncertainty.",
+        "lab_id": "SYN-LAB-09",
+        "owner_id": "synthetic-team"
+    },
+    {
+        "experiment_id": "RW-CF-015",
+        "research_goal": "Replicate the 3 cm mulch result with a harvest endpoint.",
+        "location": "Nyabihu, Rwanda",
+        "coffee_variety": "Caturra",
+        "protocol": "Three matched blocks of 20 trees each: 0 cm, 3 cm, and 6 cm mulch; measure cherry mass through harvest.",
+        "parameters": {
+            "mulch_cm": 3,
+            "shade_percent": 45,
+            "irrigation_liters_per_tree_week": 2
+        },
+        "outcome": "failure",
+        "result": "No clear difference at harvest; a late hail event damaged one block and reduced usable comparisons.",
+        "failure_mode": "Hail damage and incomplete block comparison.",
+        "change_from_previous": "Added a 6 cm arm and extended measurement through harvest.",
+        "notes": "FICTIONAL SYNTHETIC RECORD; inconclusive replication, not a real agricultural finding or farming advice.",
+        "project_impact_score": 10,
+        "impact_reason": "A failed harvest-endpoint replication that strongly affects whether the mulch line should continue.",
+        "lab_id": "SYN-LAB-09",
+        "owner_id": "synthetic-team"
+    }
+]

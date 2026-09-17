@@ -1,0 +1,13 @@
+{
+  "name": "synes-task2-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fictional Rwanda coffee experiment benchmark using local Ollama",
+  "scripts": {
+    "test": "node --test task2/test",
+    "run:task2": "node task2/run.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
