@@ -4,14 +4,14 @@ This is a small JavaScript benchmark for asking an Ollama model questions about 
 
 The story is intentionally fictional: coffee experiments in Rwanda. The goal is to see whether a model can find the right records, stay close to the evidence, notice gaps and conflicts, and express uncertainty.
 
-The runnable benchmark lives in `task2/`. The existing Synes Python files are separate and are not changed by this harness.
+The runnable benchmark lives in `task2/`.
 
 ## Quick start
 
 You need Node.js 18+ and [Ollama](https://ollama.com/download).
 
 ```sh
-ollama pull llama3.2:3b
+ollama pull llama3.2:1b
 npm install
 npm test
 npm run run:task2
@@ -19,7 +19,7 @@ npm run run:task2
 
 The last command asks all five questions and writes the answers to `task2/results/latest.json`.
 
-If Ollama is not running, or the model has not been downloaded, the command stops with a clear setup error. The model and local Ollama URL are configurable:
+If Ollama is not running, or the model has not been downloaded, the command stops with a clear setup error. The example above uses `llama3.2:1b`; the model and local Ollama URL are configurable:
 
 ```sh
 OLLAMA_MODEL=llama3.2:latest npm run run:task2
