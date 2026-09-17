@@ -1,0 +1,6 @@
+# Local operating-system files
+.DS_Store
+
+# Private scratch code and generated benchmark output
+task2/never-commit/
+task2/results/
