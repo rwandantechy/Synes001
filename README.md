@@ -1,43 +1,74 @@
 # Synes Task 2 Benchmark
 
-This repository contains the existing Synes Python Lambda experiments plus a separate JavaScript Task 2 evaluation harness in `task2/`. The harness sends five scientist-style questions and 15 experiment logs to a locally running Ollama model, saves each answer, and scores it.
+This is a small JavaScript benchmark for asking an Ollama model questions about experiment history.
 
-## Dataset
+The story is intentionally fictional: coffee experiments in Rwanda. The goal is to see whether a model can find the right records, stay close to the evidence, notice gaps and conflicts, and express uncertainty.
 
-The dataset is a deliberately fictional, Rwanda-only coffee-growing scenario. Every JSON object is one experiment, not a multi-field description of one experiment. Records use:
+The runnable benchmark lives in `task2/`. The existing Synes Python files are separate and are not changed by this harness.
+
+## Quick start
+
+You need Node.js 18+ and [Ollama](https://ollama.com/download).
+
+```sh
+ollama pull llama3.2:3b
+npm install
+npm test
+npm run run:task2
+```
+
+The last command asks all five questions and writes the answers to `task2/results/latest.json`.
+
+If Ollama is not running, or the model has not been downloaded, the command stops with a clear setup error. The model and local Ollama URL are configurable:
+
+```sh
+OLLAMA_MODEL=llama3.2:latest npm run run:task2
+OLLAMA_BASE_URL=http://127.0.0.1:11434 npm run run:task2
+OUTPUT_FILE=task2/results/my-run.json npm run run:task2
+```
+
+## What is in the dataset?
+
+There are 15 separate experiment logs and five scientist-style questions. The locations are in Rwanda, and every record is explicitly marked as a fictional synthetic record. The data should not be read as agricultural research, farming advice, or real-world evidence.
+
+Each experiment contains:
 
 `experiment_id`, `research_goal`, `location`, `coffee_variety`, `protocol`, `parameters`, `outcome`, `result`, `failure_mode`, `change_from_previous`, `notes`, `project_impact_score`, optional `impact_reason`, `lab_id`, and `owner_id`.
 
-`project_impact_score` is fictional metadata from 1 to 10 describing how important an experiment is to the overall project. It does not describe success, scientific quality, or real-world importance. A failed experiment can have a high score; for example, a failed replication can still strongly affect what the project should inspect next.
+The records deliberately contain successes, failures, related trials, conflicting results, missing measurements, and inconclusive follow-ups. That gives the questions something meaningful to test.
 
-The records include successes, failures, related trials, conflicting results, missing endpoints, and insufficient evidence. They are clearly labeled as fictional and must not be treated as agricultural findings or farming advice.
+### Project impact score
 
-## Setup and run
+`project_impact_score` is fictional project-priority metadata from 1 to 10. It answers: “How important is this experiment for deciding what the project should inspect next?”
 
-Requirements: Node.js 18+ and Ollama.
+It does **not** mean that an experiment succeeded, that its result is scientifically strong, or that it matters in real agriculture. A failed experiment can have a high impact score when the failure changes the project’s next step. The model is instructed to keep that distinction, and the scorer flags answers that use impact as proof of success or validity.
 
-1. Install Ollama from [ollama.com](https://ollama.com/download).
-2. Start Ollama, then pull a local model, for example: `ollama pull llama3.2:3b`.
-3. From this repository, run `npm run run:task2`.
+## How scoring works
 
-The default model is `llama3.2:3b`. Configure it with `OLLAMA_MODEL=your-model npm run run:task2`. Configure the endpoint with `OLLAMA_BASE_URL=http://127.0.0.1:11434`. Use `OUTPUT_FILE=task2/results/my-run.json` to choose the output path. If Ollama is stopped or the model is not pulled, the harness exits with a setup error.
+Each answer receives a score from 0 to 3 for five dimensions:
 
-The output records the model name, Ollama URL, timestamp, each question, each answer, all five dimension scores, cited IDs, impact-misuse detection, and the overall mean.
+- retrieval relevance
+- grounding
+- correctness
+- completeness
+- uncertainty
 
-## Rubric
+The overall score is the arithmetic mean of those five dimension scores. Individual scores are kept in the output so a single average does not hide where an answer performed poorly.
 
-Each answer receives 0–3 for retrieval relevance, grounding, correctness, completeness, and uncertainty. The overall mean is the arithmetic mean of those five preserved dimension scores. The scorer is a transparent deterministic heuristic: it checks expected experiment IDs, whether cited records are relevant, whether answer text includes evidence terms, and whether uncertainty is acknowledged where the question requires it. It is not an objective truth label and does not replace review.
+The scorer is a transparent, deterministic heuristic. It checks the experiment IDs cited by the answer, whether those records are relevant to the question, whether the answer includes evidence from the records, and whether uncertainty is acknowledged when it matters. These are regression signals, not objective truth labels.
 
-The metric can catch irrelevant retrieval, unsupported claims, missed or contradictory evidence, overconfident answers when evidence is insufficient, and answers that treat project impact as proof of success or scientific validity. It cannot reliably catch real-world scientific correctness, whether scientists trust or use the answer, long-term usefulness, subtle domain errors, whether recommendations work in a real farm trial, or differences between synthetic and production data.
+The benchmark can help catch irrelevant retrieval, unsupported claims, missed or contradictory evidence, overconfident answers when evidence is insufficient, and misuse of the project impact score.
+
+It cannot reliably tell us whether a claim is scientifically correct in the real world, whether scientists trust or use the answer, whether it will remain useful over time, whether it contains subtle domain errors, whether a recommendation will work in a real farm trial, or how well synthetic data represents production data.
 
 **This harness is an early regression test, not proof of scientific correctness.**
 
 ## Tests
 
-Run the dependency-free tests with:
+Run the tests without Ollama:
 
 ```sh
 npm test
 ```
 
-Tests cover dataset loading and fictional labels, dimension-preserving scoring, and output generation through an injected local-model function. The tests do not require Ollama. A real benchmark run does require a running Ollama service and a pulled model.
+The tests cover dataset loading, fictional labels, valid impact scores, dimension-by-dimension scoring, detection of impact-score misuse, and output generation with an injected model function. A live benchmark run additionally requires a running Ollama service and a pulled model.
